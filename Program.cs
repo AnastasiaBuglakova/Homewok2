@@ -44,9 +44,10 @@ int number = Convert.ToInt32(Console.ReadLine());
 bool FindWeekend(int n1)
 {
 bool weekday = true;
-if(n1 == 1 || n1 == 2 || n1 == 3 || n1 == 4 || n1 == 5) weekday = false;
+if(n1 == 6 || n1 == 7) weekday = true;
+else weekday = false;
 return weekday;
 }
 bool result = FindWeekend(number);
-if(result == false) Console.WriteLine("Нет");
-else Console.WriteLine("Да");
+if(result == true) Console.WriteLine("Да");
+else Console.WriteLine("Нет");
