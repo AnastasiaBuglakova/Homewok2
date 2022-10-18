@@ -35,4 +35,18 @@ else
     Console.WriteLine("третьей цифры нет");
     */
 
-    
+// Задача 15: Напишите программу, которая принимает на вход цифру, 
+// обозначающую день недели, и проверяет, является ли этот день выходным.
+// 6 -> да    7 -> да     1 -> нет
+
+Console.WriteLine("Please, enter number of week day from 1 to 7");
+int number = Convert.ToInt32(Console.ReadLine());
+bool FindWeekend(int n1)
+{
+bool weekday = true;
+if(n1 == 1 || n1 == 2 || n1 == 3 || n1 == 4 || n1 == 5) weekday = false;
+return weekday;
+}
+bool result = FindWeekend(number);
+if(result == false) Console.WriteLine("Нет");
+else Console.WriteLine("Да");
